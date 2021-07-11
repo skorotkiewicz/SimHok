@@ -1,0 +1,7 @@
+/node_modules
+__.js
+/aaa
+/coverage
+yarn-*.log
+yarn.lock
+/.github
