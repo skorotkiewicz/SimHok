@@ -1,6 +1,4 @@
 class SimHok {
-  constructor() {}
-
   len(data: string | any[]): number {
     return data.length;
   }
@@ -49,7 +47,7 @@ class SimHok {
     return console.log(data);
   }
 
-  compareIgnoreCase(str1: String, str2: String) {
+  compareIgnoreCase(str1: String, str2: String): boolean {
     return str1.toLowerCase() === str2.toLowerCase();
   }
 }
