@@ -24,31 +24,31 @@ test("lowercase string", () => {
   expect(sim.lower(user)).toBe("sebastian");
 });
 
-test("is started with lower latter", () => {
+test("is started with lower letter", () => {
   expect(sim.startswith(user, "s")).toBe(true);
 });
 
-test("is started with upper latter", () => {
+test("is started with upper letter", () => {
   expect(sim.startswith(user, "S")).toBe(false);
 });
 
-test("is ended with lower latter", () => {
+test("is ended with lower letter", () => {
   expect(sim.endswith(user, "n")).toBe(true);
 });
 
-test("get first latter", () => {
+test("get first letter", () => {
   expect(sim.split(user, [0])).toBe("s");
 });
 
-test("get two first latter", () => {
+test("get two first letter", () => {
   expect(sim.split(user, [0, 2])).toBe("se");
 });
 
-test("remove 3 first latter", () => {
+test("remove 3 first letter", () => {
   expect(sim.split(user, [3, 0])).toBe("astian");
 });
 
-test("get latest 3 latter", () => {
+test("get latest 3 letter", () => {
   expect(sim.split(user, [0, -3])).toBe("ian");
 });
 
