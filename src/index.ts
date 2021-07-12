@@ -48,6 +48,10 @@ class SimHok {
   log(data: any): any {
     return console.log(data);
   }
+
+  compareIgnoreCase(str1: String, str2: String) {
+    return str1.toLowerCase() === str2.toLowerCase();
+  }
 }
 
 module.exports = SimHok;

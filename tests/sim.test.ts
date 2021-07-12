@@ -60,3 +60,7 @@ test("adjust zeros", () => {
 test("console.log", () => {
   expect(sim.log("aaa")).toBe(undefined);
 });
+
+test("Compare two string and ignore case", () => {
+  expect(sim.compareIgnoreCase("Rahul", "rahul")).toBe(true);
+});
