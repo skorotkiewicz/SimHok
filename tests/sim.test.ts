@@ -58,7 +58,7 @@ test("adjust zeros", () => {
 });
 
 test("console.log", () => {
-  expect(sim.log("aaa")).toBe(undefined);
+  expect(sim.log("This is pretty awesome 🎉")).toBe(undefined);
 });
 
 test("Compare two string and ignore case", () => {
