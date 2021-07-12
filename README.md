@@ -1,5 +1,9 @@
 # Sim Hok
 
+![licence badge](https://img.shields.io/npm/l/simhok?style=flat)
+![last commit badge](https://img.shields.io/github/last-commit/skorotkiewicz/SimHok/main?style=flat)
+![downloads badge](https://img.shields.io/npm/dm/simhok?style=flat)
+
 A lightweight and easy-to-use library for features you probably use every day.
 
 ## Install
