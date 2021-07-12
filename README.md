@@ -47,5 +47,7 @@ sim.split(user, [0, -3]); // string: ian
 let james_bond = 7;
 sim.zfill(james_bond, 2); // string: 007
 
+sim.compareIgnoreCase("Sebastian", "sebastian"); // boolean: true
+
 sim.log("test"); // "test")
 ```
