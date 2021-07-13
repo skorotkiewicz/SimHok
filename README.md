@@ -41,6 +41,9 @@ sim.startswith(user, "s"); // boolean: true
 sim.startswith(user, "S"); // boolean: false
 sim.endswith(user, "n"); // boolean: true
 
+sim.rstrip(user, "an"); // string: sebasti
+sim.lstrip(user, "s"); // string: ebastian
+
 sim.split(user, [0]); // string: s
 sim.split(user, [0, 2]); // string: se
 sim.split(user, [3, 0]); // string: astian

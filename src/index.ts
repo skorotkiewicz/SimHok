@@ -23,23 +23,39 @@ class SimHok {
   }
 
   startswith(data: string, start: string): boolean {
-    return data.charAt(0) === start;
+    return this.split(data, [0, this.len(start)]) === start;
   }
 
   endswith(data: string, end: string): boolean {
-    return data.charAt(data.length - 1) === end;
+    return this.split(data, [0, this.abs(this.len(end))]) === end;
   }
 
   split(data: string, range: any): string | number {
     if (this.len(range) === 2) {
       if (range[1] < 0) {
-        return data.slice(data.length - Math.abs(range[1]));
+        return data.slice(data.length - this.abs(range[1]));
       } else {
         return data.slice(range[0], range[1] !== 0 ? range[1] : Infinity);
       }
     } else {
       return data[range];
     }
+  }
+
+  rstrip(data: string, remove: string): string {
+    return this.endswith(data, remove)
+      ? data.slice(0, this.abs(this.len(remove)))
+      : data;
+  }
+
+  lstrip(data: string, remove: string): string {
+    return this.startswith(data, remove)
+      ? data.substring(this.len(remove))
+      : data;
+  }
+
+  abs(data: number): number | number {
+    return data < 0 ? Math.abs(data) : -Math.abs(data);
   }
 
   zfill(data: string | number, many: number): string | number {
