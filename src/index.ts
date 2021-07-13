@@ -1,12 +1,17 @@
-export class SimHok {
+class SimHok {
   len(data: string | unknown[]): number {
     return data.length;
   }
 
   capitalize(data: string): string {
-    return data.split(' ').map((word: string) => (
-      `${this.upper(word[0])}${word.slice(1)}`
-    )).join(' ');
+    return data.charAt(0).toUpperCase() + data.slice(1);
+  }
+
+  capitalizeAll(data: string): string {
+    return data
+      .split(" ")
+      .map((word: string) => `${this.upper(word[0])}${word.slice(1)}`)
+      .join(" ");
   }
 
   upper(data: string): string {

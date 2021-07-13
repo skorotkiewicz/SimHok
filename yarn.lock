@@ -1806,7 +1806,7 @@ jest-worker@^27.0.6:
 
 jest@^27.0.6:
   version "27.0.6"
-  resolved "https://registry.npmjs.org/jest/-/jest-27.0.6.tgz"
+  resolved "https://registry.yarnpkg.com/jest/-/jest-27.0.6.tgz#10517b2a628f0409087fbf473db44777d7a04505"
   integrity sha512-EjV8aETrsD0wHl7CKMibKwQNQc3gIRBXlTikBmmHUeVMKaPFxdcUIBfoDqTSXDoGJIivAYGqCWVlzCSaVjPQsA==
   dependencies:
     "@jest/core" "^27.0.6"
@@ -2406,7 +2406,7 @@ tr46@^2.1.0:
 
 ts-jest@^27.0.3:
   version "27.0.3"
-  resolved "https://registry.npmjs.org/ts-jest/-/ts-jest-27.0.3.tgz"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-27.0.3.tgz#808492f022296cde19390bb6ad627c8126bf93f8"
   integrity sha512-U5rdMjnYam9Ucw+h0QvtNDbc5+88nxt7tbIvqaZUhFrfG4+SkWhMXjejCLVGcpILTPuV+H3W/GZDZrnZFpPeXw==
   dependencies:
     bs-logger "0.x"

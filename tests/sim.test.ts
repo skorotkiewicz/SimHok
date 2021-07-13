@@ -1,4 +1,4 @@
-import { SimHok } from "@src/index";
+import SimHok from "@src/index";
 
 const sim = new SimHok();
 const user = "sebastian";
@@ -12,11 +12,15 @@ test("count array length", () => {
   expect(sim.len(users)).toBe(2);
 });
 
+test("capitalize string", () => {
+  expect(sim.capitalize(user)).toBe("Sebastian");
+});
+
 test.each([
   ["sebastian", "Sebastian"],
   ["upper case", "Upper Case"],
 ])('should capitalize "%s" to "%s"', (input, expected) => {
-  expect(sim.capitalize(input)).toBe(expected);
+  expect(sim.capitalizeAll(input)).toBe(expected);
 });
 
 test("uppercase string", () => {
@@ -61,9 +65,8 @@ test("adjust zeros", () => {
   expect(sim.zfill(james_bond, 2)).toBe("007");
 });
 
-
 test("should call console.log with message", () => {
-  const spy = jest.spyOn(console, 'log').mockImplementation();
+  const spy = jest.spyOn(console, "log").mockImplementation();
   const message = "This is pretty awesome 🎉";
 
   sim.log(message);

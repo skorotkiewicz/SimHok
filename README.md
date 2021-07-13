@@ -28,10 +28,12 @@ const sim = new SimHok();
 ```javascript
 const user = "sebastian";
 const users = ["sebastian", "klaudia"];
+const hello = "hello world";
 
 sim.len(user); // number: 9
 sim.len(users); // number: 2
-sim.capitalize(user); // string: Sebastian
+sim.capitalize(hello); // string: Hello world
+sim.capitalizeAll(hello); // string: Hello World
 sim.upper(user); // string: SEBASTIAN
 sim.lower(user); // string: sebastian
 
