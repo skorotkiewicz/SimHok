@@ -1,9 +1,16 @@
-export const len = (data: string | any[]): number => {
+export const len = (data: string | unknown[]): number => {
   return data.length;
 };
 
 export const capitalize = (data: string): string => {
-  return data.charAt(0).toUpperCase() + data.slice(1);
+  return upper(data.charAt(0)) + data.slice(1);
+};
+
+export const capitalizeAll = (data: string): string => {
+  return data
+    .split(" ")
+    .map((word: string) => `${upper(word[0])}${word.slice(1)}`)
+    .join(" ");
 };
 
 export const upper = (data: string): string => {
@@ -42,10 +49,10 @@ export const zfill = (data: string | number, many: number): string | number => {
   return fill + data;
 };
 
-export const log = (data: any): any => {
+export const log = <T>(data: T): void => {
   return console.log(data);
 };
 
-export const compareIgnoreCase = (str1: String, str2: String): boolean => {
-  return str1.toLowerCase() === str2.toLowerCase();
+export const compareIgnoreCase = (str1: string, str2: string): boolean => {
+  return lower(str1) === lower(str2);
 };
