@@ -4,7 +4,7 @@ class SimHok {
   }
 
   capitalize(data: string): string {
-    return data.charAt(0).toUpperCase() + data.slice(1);
+    return this.upper(data.charAt(0)) + data.slice(1);
   }
 
   capitalizeAll(data: string): string {
@@ -54,8 +54,8 @@ class SimHok {
     console.log(data);
   }
 
-  compareIgnoreCase(str1: String, str2: String): boolean {
-    return str1.toLowerCase() === str2.toLowerCase();
+  compareIgnoreCase(str1: string, str2: string): boolean {
+    return this.lower(str1) === this.lower(str2);
   }
 }
 
