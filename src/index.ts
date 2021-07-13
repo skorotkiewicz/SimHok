@@ -4,7 +4,9 @@ export class SimHok {
   }
 
   capitalize(data: string): string {
-    return data.charAt(0).toUpperCase() + data.slice(1);
+    return data.split(' ').map((word: string) => (
+      `${this.upper(word[0])}${word.slice(1)}`
+    )).join(' ');
   }
 
   upper(data: string): string {

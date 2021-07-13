@@ -12,8 +12,11 @@ test("count array length", () => {
   expect(sim.len(users)).toBe(2);
 });
 
-test("capitalize string", () => {
-  expect(sim.capitalize(user)).toBe("Sebastian");
+test.only.each([
+  ["sebastian", "Sebastian"],
+  ["upper case", "Upper Case"],
+])('should "%s" capitalize to "%s"', (input, expected) => {
+  expect(sim.capitalize(input)).toBe(expected);
 });
 
 test("uppercase string", () => {
