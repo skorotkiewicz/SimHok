@@ -60,3 +60,4 @@ class SimHok {
 }
 
 export default SimHok;
+module.exports = SimHok;
