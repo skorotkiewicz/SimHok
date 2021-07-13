@@ -15,11 +15,11 @@ class SimHok {
     return data.toLowerCase();
   }
 
-  startswith(data: string, start: string | number): boolean {
+  startswith(data: string, start: string): boolean {
     return data.charAt(0) === start;
   }
 
-  endswith(data: string, end: string | number): boolean {
+  endswith(data: string, end: string): boolean {
     return data.charAt(data.length - 1) === end;
   }
 
