@@ -18,7 +18,9 @@ $ yarn add simhok
 
 ```javascript
 // import what you need
-const { len, capitalize, upper, lower, startswith, endswith, split, zfill, log, compareIgnoreCase } = require("simhok");
+const {
+  len, capitalize, capitalizeAll, upper, lower, startswith, endswith, split, zfill, log, compareIgnoreCase,
+} = require("simhok");
 ```
 
 ## Usage
@@ -26,12 +28,14 @@ const { len, capitalize, upper, lower, startswith, endswith, split, zfill, log, 
 ```javascript
 const user = "sebastian";
 const users = ["sebastian", "klaudia"];
+const hello = "hello world";
 
-len(user);        // number: 9
-len(users);       // number: 2
-capitalize(user); // string: Sebastian
-upper(user);      // string: SEBASTIAN
-lower(user);      // string: sebastian
+len(user);           // number: 9
+len(users);          // number: 2
+capitalize(user);    // string: Sebastian
+capitalizeAll(user); // string: Sebastian
+upper(user);         // string: SEBASTIAN
+lower(user);         // string: sebastian
 
 startswith(user, "s"); // boolean: true
 startswith(user, "S"); // boolean: false
