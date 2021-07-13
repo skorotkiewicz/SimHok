@@ -20,7 +20,7 @@ $ yarn add simhok
 // import what you need
 const {
   len, capitalize, capitalizeAll, upper, lower, startswith, endswith, 
-  rstrip, lstrip, split, zfill, log, compareIgnoreCase,
+  rstrip, lstrip, split, abs, zfill, log, compareIgnoreCase,
 } = require("simhok");
 ```
 
@@ -54,6 +54,9 @@ let james_bond = 7;
 zfill(james_bond, 2); // string: 007
 
 compareIgnoreCase("Sebastian", "sebastian"); // boolean: true
+
+abs(42);  // number: -42
+abs(-42); // number: 42
 
 log("This is pretty awesome 🎉"); // "This is pretty awesome 🎉"
 ```
