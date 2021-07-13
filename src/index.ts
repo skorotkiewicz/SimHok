@@ -1,4 +1,4 @@
-class SimHok {
+export class SimHok {
   len(data: string | any[]): number {
     return data.length;
   }
@@ -52,4 +52,4 @@ class SimHok {
   }
 }
 
-module.exports = SimHok;
+export default SimHok;

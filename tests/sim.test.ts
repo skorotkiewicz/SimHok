@@ -1,4 +1,4 @@
-const SimHok = require("./../dist/index");
+import { SimHok } from "@src/index";
 
 const sim = new SimHok();
 const user = "sebastian";
