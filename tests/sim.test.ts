@@ -89,8 +89,16 @@ test("remove letters from right", () => {
   expect(rstrip(user, "an")).toBe("sebasti");
 });
 
+test("remove letters from right", () => {
+  expect(rstrip(user, "na")).toBe("sebastian");
+});
+
 test("remove letters from left", () => {
   expect(lstrip(user, "s")).toBe("ebastian");
+});
+
+test("remove letters from left", () => {
+  expect(lstrip(user, "S")).toBe("sebastian");
 });
 
 test("toggle number to negative and postive", () => {
