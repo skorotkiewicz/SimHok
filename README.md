@@ -31,24 +31,24 @@ const user = "sebastian";
 const users = ["sebastian", "klaudia"];
 const hello = "hello world";
 
-len(user);           // number:9
-len(users);          // number: 2
-capitalize(user);    // string: Sebastian
-capitalizeAll(user); // string: Sebastian
-upper(user);         // string: SEBASTIAN
-lower(user);         // string: sebastian
+len(user);             // number:9
+len(users);            // number: 2
+capitalize(user);      // string: Sebastian
+capitalizeAll(hello);  // string: Hello World
+upper(user);           // string: SEBASTIAN
+lower(user);           // string: sebastian
 
 startswith(user, "s"); // boolean: true
 startswith(user, "S"); // boolean: false
 endswith(user, "n");   // boolean: true
 
-rstrip(user, "an");   // string: sebasti
-lstrip(user, "s");    // string: ebastian
+rstrip(user, "an");    // string: sebasti
+lstrip(user, "s");     // string: ebastian
 
-split(user, [0]);     // string: s
-split(user, [0, 2]);  // string: se
-split(user, [3, 0]);  // string: astian
-split(user, [0, -3]); // string: ian
+split(user, [0]);      // string: s
+split(user, [0, 2]);   // string: se
+split(user, [3, 0]);   // string: astian
+split(user, [0, -3]);  // string: ian
 
 let james_bond = 7;
 zfill(james_bond, 2); // string: 007
