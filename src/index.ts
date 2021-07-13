@@ -21,11 +21,11 @@ export const lower = (data: string): string => {
   return data.toLowerCase();
 };
 
-export const startswith = (data: string, start: string): boolean => {
+export const startsWith = (data: string, start: string): boolean => {
   return split(data, [0, len(start)]) === start;
 };
 
-export const endswith = (data: string, end: string): boolean => {
+export const endsWith = (data: string, end: string): boolean => {
   return split(data, [0, abs(len(end))]) === end;
 };
 
@@ -42,11 +42,11 @@ export const split = (data: string, range: any): string | number => {
 };
 
 export const rstrip = (data: string, remove: string): string => {
-  return endswith(data, remove) ? data.slice(0, abs(len(remove))) : data;
+  return endsWith(data, remove) ? data.slice(0, abs(len(remove))) : data;
 };
 
 export const lstrip = (data: string, remove: string): string => {
-  return startswith(data, remove) ? data.substring(len(remove)) : data;
+  return startsWith(data, remove) ? data.substring(len(remove)) : data;
 };
 
 export const abs = (data: number): number | number => {

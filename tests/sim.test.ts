@@ -4,8 +4,8 @@ import {
   capitalizeAll,
   upper,
   lower,
-  startswith,
-  endswith,
+  startsWith,
+  endsWith,
   split,
   rstrip,
   lstrip,
@@ -46,27 +46,27 @@ test("lowercase string", () => {
 });
 
 test("is started with `se` letters", () => {
-  expect(startswith(user, "se")).toBe(true);
+  expect(startsWith(user, "se")).toBe(true);
 });
 
 test("is started with lower letter", () => {
-  expect(startswith(user, "s")).toBe(true);
+  expect(startsWith(user, "s")).toBe(true);
 });
 
 test("is started with upper letter", () => {
-  expect(startswith(user, "S")).toBe(false);
+  expect(startsWith(user, "S")).toBe(false);
 });
 
 test("is ended with lower letter", () => {
-  expect(endswith(user, "n")).toBe(true);
+  expect(endsWith(user, "n")).toBe(true);
 });
 
 test("is ended with `an` letters", () => {
-  expect(endswith(user, "an")).toBe(true);
+  expect(endsWith(user, "an")).toBe(true);
 });
 
 test("is ended with `ia` letters", () => {
-  expect(endswith(user, "ia")).toBe(false);
+  expect(endsWith(user, "ia")).toBe(false);
 });
 
 test("get first letter", () => {
