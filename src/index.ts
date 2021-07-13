@@ -1,5 +1,5 @@
 export class SimHok {
-  len(data: string | any[]): number {
+  len(data: string | unknown[]): number {
     return data.length;
   }
 
@@ -45,8 +45,8 @@ export class SimHok {
     return fill + data;
   }
 
-  log(data: any): any {
-    return console.log(data);
+  log<T>(data: T): void {
+    console.log(data);
   }
 
   compareIgnoreCase(str1: String, str2: String): boolean {

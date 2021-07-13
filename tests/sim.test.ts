@@ -12,10 +12,10 @@ test("count array length", () => {
   expect(sim.len(users)).toBe(2);
 });
 
-test.only.each([
+test.each([
   ["sebastian", "Sebastian"],
   ["upper case", "Upper Case"],
-])('should "%s" capitalize to "%s"', (input, expected) => {
+])('should capitalize "%s" to "%s"', (input, expected) => {
   expect(sim.capitalize(input)).toBe(expected);
 });
 
@@ -57,11 +57,18 @@ test("get latest 3 letter", () => {
 
 test("adjust zeros", () => {
   let james_bond = 7;
+
   expect(sim.zfill(james_bond, 2)).toBe("007");
 });
 
-test("console.log", () => {
-  expect(sim.log("This is pretty awesome 🎉")).toBe(undefined);
+
+test("should call console.log with message", () => {
+  const spy = jest.spyOn(console, 'log').mockImplementation();
+  const message = "This is pretty awesome 🎉";
+
+  sim.log(message);
+
+  expect(spy).toHaveBeenCalledWith(message);
 });
 
 test("Compare two string and ignore case", () => {
