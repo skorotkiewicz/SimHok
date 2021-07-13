@@ -54,5 +54,8 @@ sim.zfill(james_bond, 2); // string: 007
 
 sim.compareIgnoreCase("Sebastian", "sebastian"); // boolean: true
 
+sim.abs(42); // number: -42
+sim.abs(-42); // number: 42
+
 sim.log("This is pretty awesome 🎉"); // "This is pretty awesome 🎉"
 ```
