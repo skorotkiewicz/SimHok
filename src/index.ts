@@ -50,7 +50,7 @@ export const zfill = (data: string | number, many: number): string | number => {
 };
 
 export const log = <T>(data: T): void => {
-  return console.log(data);
+  console.log(data);
 };
 
 export const compareIgnoreCase = (str1: string, str2: string): boolean => {

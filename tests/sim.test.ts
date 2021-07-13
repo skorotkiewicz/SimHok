@@ -1,6 +1,7 @@
-const {
+import {
   len,
   capitalize,
+  capitalizeAll,
   upper,
   lower,
   startswith,
@@ -9,7 +10,7 @@ const {
   zfill,
   log,
   compareIgnoreCase,
-} = require("./../dist/index");
+} from "@src/index";
 
 const user = "sebastian";
 const users = ["sebastian", "klaudia"];
@@ -24,6 +25,13 @@ test("count array length", () => {
 
 test("capitalize string", () => {
   expect(capitalize(user)).toBe("Sebastian");
+});
+
+test.each([
+  ["sebastian", "Sebastian"],
+  ["upper case", "Upper Case"],
+])('should capitalize "%s" to "%s"', (input, expected) => {
+  expect(capitalizeAll(input)).toBe(expected);
 });
 
 test("uppercase string", () => {
@@ -64,11 +72,17 @@ test("get latest 3 letter", () => {
 
 test("adjust zeros", () => {
   let james_bond = 7;
+
   expect(zfill(james_bond, 2)).toBe("007");
 });
 
-test("console.log", () => {
-  expect(log("This is pretty awesome 🎉")).toBe(undefined);
+test("should call console.log with message", () => {
+  const spy = jest.spyOn(console, "log").mockImplementation();
+  const message = "This is pretty awesome 🎉";
+
+  log(message);
+
+  expect(spy).toHaveBeenCalledWith(message);
 });
 
 test("Compare two string and ignore case", () => {
