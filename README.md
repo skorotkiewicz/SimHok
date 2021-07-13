@@ -19,7 +19,8 @@ $ yarn add simhok
 ```javascript
 // import what you need
 const {
-  len, capitalize, capitalizeAll, upper, lower, startswith, endswith, split, zfill, log, compareIgnoreCase,
+  len, capitalize, capitalizeAll, upper, lower, startswith, endswith, 
+  rstrip, lstrip, split, zfill, log, compareIgnoreCase,
 } = require("simhok");
 ```
 
@@ -40,6 +41,9 @@ lower(user);         // string: sebastian
 startswith(user, "s"); // boolean: true
 startswith(user, "S"); // boolean: false
 endswith(user, "n");   // boolean: true
+
+rstrip(user, "an");   // string: sebasti
+lstrip(user, "s");    // string: ebastian
 
 split(user, [0]);     // string: s
 split(user, [0, 2]);  // string: se

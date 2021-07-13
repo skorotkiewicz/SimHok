@@ -7,6 +7,9 @@ import {
   startswith,
   endswith,
   split,
+  rstrip,
+  lstrip,
+  abs,
   zfill,
   log,
   compareIgnoreCase,
@@ -42,6 +45,10 @@ test("lowercase string", () => {
   expect(lower(user)).toBe("sebastian");
 });
 
+test("is started with `se` letters", () => {
+  expect(startswith(user, "se")).toBe(true);
+});
+
 test("is started with lower letter", () => {
   expect(startswith(user, "s")).toBe(true);
 });
@@ -52,6 +59,14 @@ test("is started with upper letter", () => {
 
 test("is ended with lower letter", () => {
   expect(endswith(user, "n")).toBe(true);
+});
+
+test("is ended with `an` letters", () => {
+  expect(endswith(user, "an")).toBe(true);
+});
+
+test("is ended with `ia` letters", () => {
+  expect(endswith(user, "ia")).toBe(false);
 });
 
 test("get first letter", () => {
@@ -68,6 +83,20 @@ test("remove 3 first letter", () => {
 
 test("get latest 3 letter", () => {
   expect(split(user, [0, -3])).toBe("ian");
+});
+
+test("remove letters from right", () => {
+  expect(rstrip(user, "an")).toBe("sebasti");
+});
+
+test("remove letters from left", () => {
+  expect(lstrip(user, "s")).toBe("ebastian");
+});
+
+test("toggle number to negative and postive", () => {
+  let num = 42;
+  expect(abs(num)).toBe(-42);
+  expect(abs(abs(num))).toBe(42);
 });
 
 test("adjust zeros", () => {
