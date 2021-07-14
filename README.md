@@ -20,7 +20,7 @@ $ yarn add simhok
 // import what you need
 const {
   len, capitalize, capitalizeAll, upper, lower, startsWith, endsWith, 
-  rstrip, lstrip, split, abs, zfill, log, compareIgnoreCase,
+  rstrip, lstrip, split, abs, zfill, log, count, compareIgnoreCase,
 } = require("simhok");
 ```
 
@@ -51,12 +51,26 @@ split(user, [3, 0]);   // string: astian
 split(user, [0, -3]);  // string: ian
 
 let james_bond = 7;
-zfill(james_bond, 2); // string: 007
+zfill(james_bond, 2);  // string: 007
 
+count([1,2,1,3,1], 1); // number: 3
 compareIgnoreCase("Sebastian", "sebastian"); // boolean: true
 
 abs(42);  // number: -42
 abs(-42); // number: 42
 
 log("This is pretty awesome 🎉"); // "This is pretty awesome 🎉"
+```
+
+# Example in React
+
+```javascript
+import { upper, len } from "simhok";
+
+const App = () => {
+  let name = upper("Sebastian");
+  let users = len(["Sebastian", "Klaudia"]);
+
+  return <div>{users > 0 && name}</div>;
+};
 ```
