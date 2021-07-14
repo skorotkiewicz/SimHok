@@ -1,72 +1,85 @@
-class SimHok {
-  constructor() {}
+export const len = (data: string | unknown[]): number => {
+  return data.length;
+};
 
-  len(data: string | any[]): number {
-    return data.length;
-  }
+export const capitalize = (data: string): string => {
+  return upper(data.charAt(0)) + data.slice(1);
+};
 
-  capitalize(data: string): string {
-    return data.charAt(0).toUpperCase() + data.slice(1);
-  }
+export const capitalizeAll = (data: string): string => {
+  return data
+    .split(" ")
+    .map((word: string) => `${upper(word[0])}${word.slice(1)}`)
+    .join(" ");
+};
 
-  upper(data: string): string {
-    return data.toUpperCase();
-  }
+export const upper = (data: string): string => {
+  return data.toUpperCase();
+};
 
-  lower(data: string): string {
-    return data.toLowerCase();
-  }
+export const lower = (data: string): string => {
+  return data.toLowerCase();
+};
 
-  startswith(data: string, start: string | number): boolean {
-    return data.charAt(0) === start;
-  }
+export const startsWith = (data: string, start: string): boolean => {
+  return split(data, [0, len(start)]) === start;
+};
 
-  endswith(data: string, end: string | number): boolean {
-    return data.charAt(data.length - 1) === end;
-  }
+export const endsWith = (data: string, end: string): boolean => {
+  return split(data, [0, abs(len(end))]) === end;
+};
 
-  split(data: string, range: any): string | number {
-    if (this.len(range) === 2) {
-      if (range[1] < 0) {
-        return data.slice(data.length - Math.abs(range[1]));
-      } else {
-        return data.slice(range[0], range[1] !== 0 ? range[1] : Infinity);
-      }
+export const split = (data: string, range: any): string | number => {
+  if (len(range) === 2) {
+    if (range[1] < 0) {
+      return data.slice(data.length - abs(range[1]));
     } else {
-      return data[range];
+      return data.slice(range[0], range[1] !== 0 ? range[1] : Infinity);
     }
+  } else {
+    return data[range];
   }
+};
 
-  zfill(data: string | number, many: number): string | number {
-    let fill = "";
-    for (let i = 0; i < many; i++) {
-      fill += 0;
-    }
-    return fill + data;
+export const rstrip = (data: string, remove: string): string => {
+  return endsWith(data, remove) ? data.slice(0, abs(len(remove))) : data;
+};
+
+export const lstrip = (data: string, remove: string): string => {
+  return startsWith(data, remove) ? data.substring(len(remove)) : data;
+};
+
+export const abs = (data: number): number | number => {
+  return data < 0 ? Math.abs(data) : -Math.abs(data);
+};
+
+export const zfill = (data: string | number, many: number): string | number => {
+  let fill = "";
+  for (let i = 0; i < many; i++) {
+    fill += 0;
   }
+  return fill + data;
+};
 
-  log(data: any): any {
-    return console.log(data);
-  }
+/**
+ * Count the number of element persent inside the array
+ * This works only for  permitive values like, Number, string, boolean
+ * @param ar array
+ * @param toCount any element
+ * @return count the number of elements persent
+ */
+export const count = (ar: any, toCount: any): number => {
+  let count = 0;
+  ar.forEach((element: any) => {
+    count += element === toCount ? 1 : 0;
+  });
+  return count;
+};
 
-  compareIgnoreCase(str1: String, str2: String) {
-    return str1.toLowerCase() === str2.toLowerCase();
-  }
+export const log = <T>(data: T): void => {
+  console.log(data);
+};
 
-  /**
-   * Count the number of element persent inside the array
-   * This works only for  permitive values like, Number, string, boolean
-   * @param ar array
-   * @param toCount any element
-   * @return count the number of elements persent
-   */
-  count(ar: any, toCount: any) {
-    let count = 0;
-    ar.forEach((element: any) => {
-      count += element === toCount ? 1 : 0;
-    });
-    return count;
-  }
-}
-
-module.exports = SimHok;
+export const compareIgnoreCase = (str1: string, str2: string): boolean => {
+  return lower(str1) === lower(str2);
+};

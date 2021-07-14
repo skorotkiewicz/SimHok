@@ -1,4 +1,4 @@
-# Sim Hok
+# SimHok
 
 ![licence badge](https://img.shields.io/npm/l/simhok?style=flat)
 ![last commit badge](https://img.shields.io/github/last-commit/skorotkiewicz/SimHok/main?style=flat)
@@ -10,17 +10,18 @@ A lightweight and easy-to-use library for features you probably use every day.
 
 ```sh
 $ npm install simhok
-
-# or
-
+// or
 $ yarn add simhok
 ```
 
 ## Import
 
 ```javascript
-const SimHok = require("simhok");
-const sim = new SimHok();
+// import what you need
+const {
+  len, capitalize, capitalizeAll, upper, lower, startsWith, endsWith, 
+  rstrip, lstrip, split, abs, zfill, log, compareIgnoreCase,
+} = require("simhok");
 ```
 
 ## Usage
@@ -28,24 +29,34 @@ const sim = new SimHok();
 ```javascript
 const user = "sebastian";
 const users = ["sebastian", "klaudia"];
+const hello = "hello world";
 
-sim.len(user); // number: 9
-sim.len(users); // number: 2
-sim.capitalize(user); // string: Sebastian
-sim.upper(user); // string: SEBASTIAN
-sim.lower(user); // string: sebastian
+len(user);             // number:9
+len(users);            // number: 2
+capitalize(user);      // string: Sebastian
+capitalizeAll(hello);  // string: Hello World
+upper(user);           // string: SEBASTIAN
+lower(user);           // string: sebastian
 
-sim.startswith(user, "s"); // boolean: true
-sim.startswith(user, "S"); // boolean: false
-sim.endswith(user, "n"); // boolean: true
+startsWith(user, "s"); // boolean: true
+startsWith(user, "S"); // boolean: false
+endsWith(user, "n");   // boolean: true
 
-sim.split(user, [0]); // string: s
-sim.split(user, [0, 2]); // string: se
-sim.split(user, [3, 0]); // string: astian
-sim.split(user, [0, -3]); // string: ian
+rstrip(user, "an");    // string: sebasti
+lstrip(user, "s");     // string: ebastian
+
+split(user, [0]);      // string: s
+split(user, [0, 2]);   // string: se
+split(user, [3, 0]);   // string: astian
+split(user, [0, -3]);  // string: ian
 
 let james_bond = 7;
-sim.zfill(james_bond, 2); // string: 007
+zfill(james_bond, 2); // string: 007
 
-sim.log("test"); // "test")
+compareIgnoreCase("Sebastian", "sebastian"); // boolean: true
+
+abs(42);  // number: -42
+abs(-42); // number: 42
+
+log("This is pretty awesome 🎉"); // "This is pretty awesome 🎉"
 ```
