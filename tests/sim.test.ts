@@ -64,3 +64,8 @@ test("console.log", () => {
 test("Compare two string and ignore case", () => {
   expect(sim.compareIgnoreCase("Rahul", "rahul")).toBe(true);
 });
+
+
+test("Count number of elements",()=>{
+  expect(sim.count([1,2,3,1,3,1],1)).toBe(3);
+})

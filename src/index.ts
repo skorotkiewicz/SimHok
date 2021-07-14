@@ -52,6 +52,21 @@ class SimHok {
   compareIgnoreCase(str1: String, str2: String) {
     return str1.toLowerCase() === str2.toLowerCase();
   }
+
+  /**
+   * Count the number of element persent inside the array
+   * This works only for  permitive values like, Number, string, boolean
+   * @param ar array
+   * @param toCount any element
+   * @return count the number of elements persent
+   */
+  count(ar: any, toCount: any) {
+    let count = 0;
+    ar.forEach((element: any) => {
+      count += element === toCount ? 1 : 0;
+    });
+    return count;
+  }
 }
 
 module.exports = SimHok;
