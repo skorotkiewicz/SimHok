@@ -128,5 +128,27 @@ test("Compare two string and ignore case", () => {
 });
 
 test("Count number of elements", () => {
-  expect(count([1, 2, 3, 1, 3, 1], 1)).toBe(3);
+  let arr = [
+    1,
+    2,
+    3,
+    1,
+    3,
+    1,
+    "el",
+    "el",
+    true,
+    true,
+    false,
+    null,
+    null,
+    undefined,
+  ];
+
+  expect(count(arr, 1)).toBe(3);
+  expect(count(arr, true)).toBe(2);
+  expect(count(arr, null)).toBe(2);
+  expect(count(arr, "el")).toBe(2);
+  expect(count(arr, "le")).toBe(0);
+  expect(count(arr, undefined)).toBe(1);
 });
