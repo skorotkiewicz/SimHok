@@ -18,10 +18,13 @@ $ yarn add simhok
 
 ```javascript
 // import what you need
-const {
-  len, capitalize, capitalizeAll, upper, lower, startsWith, endsWith, 
-  rstrip, lstrip, split, abs, zfill, log, count, compareIgnoreCase,
-} = require("simhok");
+const { 
+    len, capitalize, capitalizeAll, 
+    upper, lower, startsWith, endsWith, rstrip, lstrip, split, 
+    abs, zfill, log, count, compareIgnoreCase, } = require("simhok");
+
+// or
+import * as Sim from "simhok"
 ```
 
 ## Usage
@@ -65,10 +68,12 @@ log("This is pretty awesome 🎉"); // "This is pretty awesome 🎉"
 # Example in React
 
 ```javascript
-import { upper, len } from "simhok";
+import { len } from "simhok"; 
+// or
+import * as Sim from "simhok"; 
 
 const App = () => {
-  let name = upper("Sebastian");
+  let name = Sim.upper("Sebastian");
   let users = len(["Sebastian", "Klaudia"]);
 
   return <div>{users > 0 && name}</div>;
