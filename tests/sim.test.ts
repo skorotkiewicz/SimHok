@@ -13,6 +13,7 @@ import {
   zfill,
   log,
   compareIgnoreCase,
+  count,
 } from "@src/index";
 
 const user = "sebastian";
@@ -124,4 +125,8 @@ test("should call console.log with message", () => {
 
 test("Compare two string and ignore case", () => {
   expect(compareIgnoreCase("Rahul", "rahul")).toBe(true);
+});
+
+test("Count number of elements", () => {
+  expect(count([1, 2, 3, 1, 3, 1], 1)).toBe(3);
 });

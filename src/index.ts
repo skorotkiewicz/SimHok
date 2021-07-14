@@ -61,6 +61,21 @@ export const zfill = (data: string | number, many: number): string | number => {
   return fill + data;
 };
 
+/**
+ * Count the number of element persent inside the array
+ * This works only for  permitive values like, Number, string, boolean
+ * @param ar array
+ * @param toCount any element
+ * @return count the number of elements persent
+ */
+export const count = (ar: any, toCount: any): number => {
+  let count = 0;
+  ar.forEach((element: any) => {
+    count += element === toCount ? 1 : 0;
+  });
+  return count;
+};
+
 export const log = <T>(data: T): void => {
   console.log(data);
 };
