@@ -19,7 +19,8 @@
     "dev": "tsc -w",
     "build": "tsc",
     "test": "jest",
-    "prepare": "tsc && npm run test"
+    "prepare": "tsc && npm run test",
+    "docs": "tsc && jsdoc --configure .jsdoc.json --verbose"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",
