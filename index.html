@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#abs">abs</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#capitalize">capitalize</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#capitalizeAll">capitalizeAll</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#compareIgnoreCase">compareIgnoreCase</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#count">count</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#endsWith">endsWith</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#len">len</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#log">log</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#lower">lower</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#lstrip">lstrip</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#rstrip">rstrip</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#startsWith">startsWith</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#upper">upper</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#zfill">zfill</a></span></li>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>SimHok</h1>
+<p><img src="https://img.shields.io/npm/l/simhok?style=flat" alt="licence badge">
+<img src="https://img.shields.io/github/last-commit/skorotkiewicz/SimHok/main?style=flat" alt="last commit badge">
+<img src="https://img.shields.io/npm/dm/simhok?style=flat" alt="downloads badge"></p>
+<p>A lightweight and easy-to-use library for features you probably use every day.</p>
+<h2>Install</h2>
+<pre class="prettyprint source lang-sh"><code>$ npm install simhok
+// or
+$ yarn add simhok
+</code></pre>
+<h2>Import</h2>
+<pre class="prettyprint source lang-javascript"><code>// Import all functions
+import * as Sim from &quot;simhok&quot;
+    
+// Import what you need
+import { len, log } from &quot;simhok&quot;
+
+// In node.js
+const { len, log } = require(&quot;simhok&quot;);
+</code></pre>
+<h2>Available functions</h2>
+<pre class="prettyprint source lang-javascript"><code>const user = &quot;sebastian&quot;;
+const users = [&quot;sebastian&quot;, &quot;klaudia&quot;];
+const hello = &quot;hello world&quot;;
+
+len(user);             // number:9
+len(users);            // number: 2
+capitalize(user);      // string: Sebastian
+capitalizeAll(hello);  // string: Hello World
+upper(user);           // string: SEBASTIAN
+lower(user);           // string: sebastian
+
+startsWith(user, &quot;s&quot;); // boolean: true
+startsWith(user, &quot;S&quot;); // boolean: false
+endsWith(user, &quot;n&quot;);   // boolean: true
+
+rstrip(user, &quot;an&quot;);    // string: sebasti
+lstrip(user, &quot;s&quot;);     // string: ebastian
+
+split(user, [0]);      // string: s
+split(user, [0, 2]);   // string: se
+split(user, [3, 0]);   // string: astian
+split(user, [0, -3]);  // string: ian
+
+let james_bond = 7;
+zfill(james_bond, 2);  // string: 007
+
+count([1,2,1,3,1], 1); // number: 3
+compareIgnoreCase(&quot;Sebastian&quot;, &quot;sebastian&quot;); // boolean: true
+
+abs(42);  // number: -42
+abs(-42); // number: 42
+
+log(&quot;This is pretty awesome 🎉&quot;); // &quot;This is pretty awesome 🎉&quot;
+</code></pre>
+<h1>Example in React</h1>
+<pre class="prettyprint source lang-javascript"><code>import { len, upper } from &quot;simhok&quot;; 
+
+const App = () => {
+  let name = upper(&quot;Sebastian&quot;);
+  let users = len([&quot;Sebastian&quot;, &quot;Klaudia&quot;]);
+
+  return &lt;div>{users > 0 && name}&lt;/div>;
+};
+</code></pre>
+<pre class="prettyprint source lang-javascript"><code>import * as Sim from &quot;simhok&quot;; 
+
+const App = () => {
+  let name = Sim.upper(&quot;Sebastian&quot;);
+  let users = Sim.len([&quot;Sebastian&quot;, &quot;Klaudia&quot;]);
+
+  return &lt;div>{users > 0 && name}&lt;/div>;
+};
+</code></pre></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Thu Jul 15 2021 15:16:51 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
