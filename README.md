@@ -17,17 +17,17 @@ $ yarn add simhok
 ## Import
 
 ```javascript
-// import what you need
-const { 
-    len, capitalize, capitalizeAll, 
-    upper, lower, startsWith, endsWith, rstrip, lstrip, split, 
-    abs, zfill, log, count, compareIgnoreCase, } = require("simhok");
-
-// or
+// Import all functions
 import * as Sim from "simhok"
+    
+// Import what you need
+import { len, log } from "simhok"
+
+// In node.js
+const { len, log } = require("simhok");
 ```
 
-## Usage
+## Available functions
 
 ```javascript
 const user = "sebastian";
@@ -68,13 +68,22 @@ log("This is pretty awesome 🎉"); // "This is pretty awesome 🎉"
 # Example in React
 
 ```javascript
-import { len } from "simhok"; 
-// or
+import { len, upper } from "simhok"; 
+
+const App = () => {
+  let name = upper("Sebastian");
+  let users = len(["Sebastian", "Klaudia"]);
+
+  return <div>{users > 0 && name}</div>;
+};
+```
+
+```javascript
 import * as Sim from "simhok"; 
 
 const App = () => {
   let name = Sim.upper("Sebastian");
-  let users = len(["Sebastian", "Klaudia"]);
+  let users = Sim.len(["Sebastian", "Klaudia"]);
 
   return <div>{users > 0 && name}</div>;
 };
