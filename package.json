@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/skorotkiewicz/SimHok/issues"
   },
-  "homepage": "https://github.com/skorotkiewicz/SimHok#readme",
+  "homepage": "https://skorotkiewicz.github.io/SimHok/",
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
