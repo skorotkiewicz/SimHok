@@ -1,9 +1,9 @@
 /**
  * Returns the length of a String object.
  * Gets the length of the array.
- * This is a number one higher than the highest index in the array.
- *
- * @param data
+ * This is a number one higher than the highest index in the array. 
+ * @param {string | unknown[]} data
+ * @returns {number} 
  */
 export const len = (data: string | unknown[]): number => {
   return data.length;
@@ -11,8 +11,8 @@ export const len = (data: string | unknown[]): number => {
 
 /**
  * Capitalize only the _first word_ in the String.
- * @param data String
- * @return Capitalized String
+ * @param {string} data String
+ * @returns {string} Capitalized String
  */
 export const capitalize = (data: string): string => {
   return upper(data.charAt(0)) + data.slice(1);
@@ -20,8 +20,8 @@ export const capitalize = (data: string): string => {
 
 /**
  * Capitalize _each word_ in the specified String.
- * @param data String
- * @return Capitalized String
+ * @param {string} data String
+ * @returns {string} Capitalized String
  */
 export const capitalizeAll = (data: string): string => {
   return data
@@ -32,8 +32,8 @@ export const capitalizeAll = (data: string): string => {
 
 /**
  * Converts all the alphabetic characters in a String to uppercase.
- * @param data String
- * @return Uppercase String
+ * @param {string} data String
+ * @returns {string} Uppercase String
  */
 export const upper = (data: string): string => {
   return data.toUpperCase();
@@ -41,8 +41,8 @@ export const upper = (data: string): string => {
 
 /**
  * Converts all the alphabetic characters in a String to lowercase.
- * @param data String
- * @return Lowercase String
+ * @param {string} data String
+ * @returns {string} Lowercase String
  */
 export const lower = (data: string): string => {
   return data.toLowerCase();
@@ -50,9 +50,9 @@ export const lower = (data: string): string => {
 
 /**
  * Checks if the String starts with the given pattern.
- * @param data String
- * @param start Start pattern.
- * @return Returns true if found.
+ * @param {string} data String
+ * @param {string} start Start pattern.
+ * @returns {boolean} Returns true if found.
  */
 export const startsWith = (data: string, start: string): boolean => {
   return split(data, [0, len(start)]) === start;
@@ -60,9 +60,9 @@ export const startsWith = (data: string, start: string): boolean => {
 
 /**
  * Checks if the String ends with the given pattern.
- * @param data String
- * @param start Pattern
- * @return Returns true if found.
+ * @param {string} data String
+ * @param {string} start Pattern
+ * @returns {boolean} Returns true if found.
  */
 export const endsWith = (data: string, end: string): boolean => {
   return split(data, [0, abs(len(end))]) === end;
@@ -82,9 +82,9 @@ export const split = (data: string, range: any): string | number => {
 
 /**
  * Removes the specified characters at the end of the String.
- * @param data String
- * @param remove Characters to remove.
- * @returns
+ * @param {string} data String
+ * @param {string} remove Characters to remove.
+ * @returns {string}
  */
 export const rstrip = (data: string, remove: string): string => {
   return endsWith(data, remove) ? data.slice(0, abs(len(remove))) : data;
@@ -92,9 +92,9 @@ export const rstrip = (data: string, remove: string): string => {
 
 /**
  * Removes the specified characters at the beginning of the String.
- * @param data String
- * @param remove Characters to remove.
- * @returns
+ * @param {string} data String
+ * @param {string} remove Characters to remove.
+ * @returns {string}
  */
 export const lstrip = (data: string, remove: string): string => {
   return startsWith(data, remove) ? data.substring(len(remove)) : data;
@@ -102,15 +102,18 @@ export const lstrip = (data: string, remove: string): string => {
 
 /**
  * Converts negative numbers to positive and positive numbers to negative.
+ * @param {number} data 
+ * @returns {number}
  */
-export const abs = (data: number): number | number => {
+export const abs = (data: number): number => {
   return data < 0 ? Math.abs(data) : -Math.abs(data);
 };
 
 /**
  * The zfill() method adds zeros (0) at the beginning of the String.
- * @param data String
- * @param many How many zeros to add.
+ * @param {string} data String
+ * @param {string | number} many How many zeros to add.
+ * @returns {string | number}
  */
 export const zfill = (data: string | number, many: number): string | number => {
   let fill = "";
@@ -123,9 +126,9 @@ export const zfill = (data: string | number, many: number): string | number => {
 /**
  * Count the number of element persent inside the array
  * This works only for permitive values like, Number, String, Boolean
- * @param arr Array
- * @param toCount Any element
- * @return Count the number of elements persent.
+ * @param {any} arr Array
+ * @param {any} toCount Any element
+ * @returns {number} Count the number of elements persent.
  */
 export const count = (arr: any, toCount: any): number => {
   let count = arr.filter((s: any) => s === toCount);
@@ -134,7 +137,7 @@ export const count = (arr: any, toCount: any): number => {
 
 /**
  * Prints to `stdout` with newline.
- * @param data
+ * @param {any} data
  */
 export const log = <T>(data: T): void => {
   console.log(data);
@@ -142,8 +145,9 @@ export const log = <T>(data: T): void => {
 
 /**
  * Compares two Strings with case ignore.
- * @param str1 String
- * @param str2 String
+ * @param {string} str1 String
+ * @param {string} str2 String
+ * @returns {boolean}
  */
 export const compareIgnoreCase = (str1: string, str2: string): boolean => {
   return lower(str1) === lower(str2);
