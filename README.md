@@ -21,12 +21,12 @@ $ yarn add simhok
 ## Import
 
 ```javascript
-// Import all functions
-import * as Sim from "simhok"
-    
 // Import what you need
 import { len, log } from "simhok"
 
+// Import all functions
+import * as Sim from "simhok"
+    
 // In node.js
 const { len, log } = require("simhok");
 ```
