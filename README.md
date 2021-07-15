@@ -3,8 +3,12 @@
 ![licence badge](https://img.shields.io/npm/l/simhok?style=flat)
 ![last commit badge](https://img.shields.io/github/last-commit/skorotkiewicz/SimHok/main?style=flat)
 ![downloads badge](https://img.shields.io/npm/dm/simhok?style=flat)
+![npm version badge](https://img.shields.io/npm/v/simhok?style=flat)
+![size badge](https://img.shields.io/bundlephobia/min/simhok?style=flat)
 
 A lightweight and easy-to-use library for features you probably use every day.
+
+Check the [documentation](https://skorotkiewicz.github.io/SimHok/) to see all available functions. 
 
 ## Install
 
