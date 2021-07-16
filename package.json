@@ -1,6 +1,6 @@
 {
   "name": "simhok",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A lightweight and easy-to-use library for features you probably use every day",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
