@@ -135,5 +135,5 @@ test("Count number of elements", () => {
 
 test("Change handy number string into regular number", () => {
   expect(n("1_000_000")).toBe(1000000);
-  expect(n("1_000")).toBe(1000);
+  expect(n("1_000") + n("1_000_000")).toBe(1001000);
 });
