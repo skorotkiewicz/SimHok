@@ -152,3 +152,15 @@ export const log = <T>(data: T): void => {
 export const compareIgnoreCase = (str1: string, str2: string): boolean => {
   return lower(str1) === lower(str2);
 };
+
+/**
+ * A handy and easy-to-read way to write long numbers.
+ * 
+ * String `1_000_000` change into regular number. 
+ * @param {string} number 
+ * @returns {number}
+ */
+
+export const n = (number: string): number => {
+  return Number(number.replace(/_/gm, ""));
+};

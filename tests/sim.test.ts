@@ -14,6 +14,7 @@ import {
   log,
   compareIgnoreCase,
   count,
+  n
 } from "@src/index";
 
 const user = "sebastian";
@@ -130,4 +131,9 @@ test("Compare two string and ignore case", () => {
 test("Count number of elements", () => {
   let arr = [ 1, 2, 3, 1, 3, 1];
   expect(count(arr, 1)).toBe(3);
+});
+
+test("Change handy number string into regular number", () => {
+  expect(n("1_000_000")).toBe(1000000);
+  expect(n("1_000")).toBe(1000);
 });
