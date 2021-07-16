@@ -155,7 +155,6 @@ export const compareIgnoreCase = (str1: string, str2: string): boolean => {
 
 /**
  * A handy and easy-to-read way to write long numbers.
- * 
  * String `1_000_000` change into regular number. 
  * @param {string} number 
  * @returns {number}
