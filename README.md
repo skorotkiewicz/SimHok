@@ -40,7 +40,7 @@ const hello = "hello world";
 
 len(user);             // number:9
 len(users);            // number: 2
-capitalize(user);      // string: Sebastian
+capitalize(hello);     // string: Hello world
 capitalizeAll(hello);  // string: Hello World
 upper(user);           // string: SEBASTIAN
 lower(user);           // string: sebastian
