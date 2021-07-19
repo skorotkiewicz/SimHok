@@ -1,12 +1,18 @@
 {
   "name": "simhok",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "A lightweight and easy-to-use library for features you probably use every day",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Sebastian Korotkiewicz",
   "license": "MIT",
-  "keywords": ["simhok", "utils", "helper", "python"],
+  "keywords": [
+    "simhok",
+    "utils",
+    "helper",
+    "python",
+    "javascript"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skorotkiewicz/SimHok.git"
