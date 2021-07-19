@@ -168,7 +168,7 @@ export const n = (number: string): number => {
  * Remove all whitespaces, new lines and set correct punctuation
  * @param {string} data
  * @param {boolean} multiline default false
- * @returns
+ * @returns {string}
  */
 export const clean = (data: string, multiline = false): string => {
   // In English, it is always an error. There should be no space between a sentence and its ending punctuation, whether that's a period, a question mark, or an exclamation mark. There should also be no space before a colon, semicolon, or comma.
