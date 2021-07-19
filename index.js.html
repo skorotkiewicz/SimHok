@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#abs">abs</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#capitalize">capitalize</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#capitalizeAll">capitalizeAll</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#compareIgnoreCase">compareIgnoreCase</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#count">count</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#endsWith">endsWith</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#len">len</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#log">log</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#lower">lower</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#lstrip">lstrip</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#n">n</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#rstrip">rstrip</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#startsWith">startsWith</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#upper">upper</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#zfill">zfill</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#capitalize">capitalize</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#capitalizeAll">capitalizeAll</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#clean">clean</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#compareIgnoreCase">compareIgnoreCase</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#count">count</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#endsWith">endsWith</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#flip">flip</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#len">len</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#log">log</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#lower">lower</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#lstrip">lstrip</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#n">n</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#rstrip">rstrip</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#startsWith">startsWith</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#upper">upper</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#zfill">zfill</a></span></li>
 </nav>
 
 <div id="main">
@@ -41,7 +41,7 @@
         <article>
             <pre class="prettyprint source linenums"><code>"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.n = exports.compareIgnoreCase = exports.log = exports.count = exports.zfill = exports.abs = exports.lstrip = exports.rstrip = exports.split = exports.endsWith = exports.startsWith = exports.lower = exports.upper = exports.capitalizeAll = exports.capitalize = exports.len = void 0;
+exports.clean = exports.n = exports.compareIgnoreCase = exports.log = exports.count = exports.zfill = exports.flip = exports.lstrip = exports.rstrip = exports.split = exports.endsWith = exports.startsWith = exports.lower = exports.upper = exports.capitalizeAll = exports.capitalize = exports.len = void 0;
 /**
  * Returns the length of a String object.
  * Gets the length of the array.
@@ -109,13 +109,13 @@ exports.startsWith = startsWith;
  * @returns {boolean} Returns true if found.
  */
 var endsWith = function (data, end) {
-    return exports.split(data, [0, exports.abs(exports.len(end))]) === end;
+    return exports.split(data, [0, exports.flip(exports.len(end))]) === end;
 };
 exports.endsWith = endsWith;
 var split = function (data, range) {
     if (exports.len(range) === 2) {
         if (range[1] &lt; 0) {
-            return data.slice(data.length - exports.abs(range[1]));
+            return data.slice(data.length - exports.flip(range[1]));
         }
         else {
             return data.slice(range[0], range[1] !== 0 ? range[1] : Infinity);
@@ -133,7 +133,7 @@ exports.split = split;
  * @returns {string}
  */
 var rstrip = function (data, remove) {
-    return exports.endsWith(data, remove) ? data.slice(0, exports.abs(exports.len(remove))) : data;
+    return exports.endsWith(data, remove) ? data.slice(0, exports.flip(exports.len(remove))) : data;
 };
 exports.rstrip = rstrip;
 /**
@@ -151,10 +151,10 @@ exports.lstrip = lstrip;
  * @param {number} data
  * @returns {number}
  */
-var abs = function (data) {
+var flip = function (data) {
     return data &lt; 0 ? Math.abs(data) : -Math.abs(data);
 };
-exports.abs = abs;
+exports.flip = flip;
 /**
  * The zfill() method adds zeros (0) at the beginning of the String.
  * @param {string} data String
@@ -209,6 +209,26 @@ var n = function (number) {
     return Number(number.replace(/_/gm, ""));
 };
 exports.n = n;
+/**
+ * Remove all whitespaces, new lines and set correct punctuation
+ * @param {string} data
+ * @param {boolean} multiline default false
+ * @returns {string}
+ */
+var clean = function (data, multiline) {
+    // In English, it is always an error. There should be no space between a sentence and its ending punctuation, whether that's a period, a question mark, or an exclamation mark. There should also be no space before a colon, semicolon, or comma.
+    if (multiline === void 0) { multiline = false; }
+    data = !multiline ? data.replace(/\s+/g, " ") : data;
+    return data
+        .replace(/[ ]+/g, " ")
+        .replace(/\s+\./g, ".")
+        .replace(/\s+\,/g, ",")
+        .replace(/\s+\?/g, "?")
+        .replace(/\s+\:/g, ":")
+        .replace(/\s+\;/g, ";")
+        .replace(/\s+\!/g, "!");
+};
+exports.clean = clean;
 </code></pre>
         </article>
     </section>
@@ -221,7 +241,7 @@ exports.n = n;
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Fri Jul 16 2021 18:09:17 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Mon Jul 19 2021 20:17:23 GMT+0000 (Coordinated Universal Time) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>
