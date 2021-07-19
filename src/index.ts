@@ -1,9 +1,9 @@
 /**
  * Returns the length of a String object.
  * Gets the length of the array.
- * This is a number one higher than the highest index in the array. 
+ * This is a number one higher than the highest index in the array.
  * @param {string | unknown[]} data
- * @returns {number} 
+ * @returns {number}
  */
 export const len = (data: string | unknown[]): number => {
   return data.length;
@@ -102,7 +102,7 @@ export const lstrip = (data: string, remove: string): string => {
 
 /**
  * Converts negative numbers to positive and positive numbers to negative.
- * @param {number} data 
+ * @param {number} data
  * @returns {number}
  */
 export const flip = (data: number): number => {
@@ -155,11 +155,32 @@ export const compareIgnoreCase = (str1: string, str2: string): boolean => {
 
 /**
  * A handy and easy-to-read way to write long numbers.
- * String `1_000_000` change into regular number. 
- * @param {string} number 
+ * String `1_000_000` change into regular number.
+ * @param {string} number
  * @returns {number}
  */
 
 export const n = (number: string): number => {
   return Number(number.replace(/_/gm, ""));
+};
+
+/**
+ * Remove all whitespaces, new lines and set correct punctuation
+ * @param {string} data
+ * @param {boolean} multiline default false
+ * @returns
+ */
+export const clean = (data: string, multiline = false): string => {
+  // In English, it is always an error. There should be no space between a sentence and its ending punctuation, whether that's a period, a question mark, or an exclamation mark. There should also be no space before a colon, semicolon, or comma.
+
+  data = !multiline ? data.replace(/\s+/g, " ") : data;
+
+  return data
+    .replace(/[ ]+/g, " ")
+    .replace(/\s+\./g, ".")
+    .replace(/\s+\,/g, ",")
+    .replace(/\s+\?/g, "?")
+    .replace(/\s+\:/g, ":")
+    .replace(/\s+\;/g, ";")
+    .replace(/\s+\!/g, "!");
 };

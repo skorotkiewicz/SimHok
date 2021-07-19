@@ -8,7 +8,7 @@
 
 A lightweight and easy-to-use library for features you probably use every day.
 
-Check the [documentation](https://skorotkiewicz.github.io/SimHok/) to see all available functions. 
+Check the [documentation](https://skorotkiewicz.github.io/SimHok/) to see all available functions.
 
 ## Install
 
@@ -22,11 +22,11 @@ $ yarn add simhok
 
 ```javascript
 // Import what you need
-import { len, log } from "simhok"
+import { len, log } from "simhok";
 
 // Import all functions
-import * as Sim from "simhok"
-    
+import * as Sim from "simhok";
+
 // In node.js
 const { len, log } = require("simhok");
 ```
@@ -66,7 +66,15 @@ compareIgnoreCase("Sebastian", "sebastian"); // boolean: true
 flip(42);              // number: -42
 flip(-42);             // number: 42
 
-n("1_000_000")        // number: 1000000
+n("1_000_000")         // number: 1000000
+
+clean("This is   inline   String !"); // string: "This is inline String!"
+// or with multi lines:
+clean(`Is   this    now , 
+multi line  String ?  `, true);       // string:
+
+`Is this now, 
+multi line String?`;
 
 log("This is pretty awesome 🎉"); // "This is pretty awesome 🎉"
 ```
@@ -74,7 +82,7 @@ log("This is pretty awesome 🎉"); // "This is pretty awesome 🎉"
 # Example in React
 
 ```javascript
-import { len, upper } from "simhok"; 
+import { len, upper } from "simhok";
 
 const App = () => {
   let name = upper("Sebastian");
@@ -85,7 +93,7 @@ const App = () => {
 ```
 
 ```javascript
-import * as Sim from "simhok"; 
+import * as Sim from "simhok";
 
 const App = () => {
   let name = Sim.upper("Sebastian");

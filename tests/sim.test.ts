@@ -14,7 +14,8 @@ import {
   log,
   compareIgnoreCase,
   count,
-  n
+  n,
+  clean,
 } from "@src/index";
 
 const user = "sebastian";
@@ -129,11 +130,32 @@ test("Compare two string and ignore case", () => {
 });
 
 test("Count number of elements", () => {
-  let arr = [ 1, 2, 3, 1, 3, 1];
+  let arr = [1, 2, 3, 1, 3, 1];
   expect(count(arr, 1)).toBe(3);
 });
 
 test("Change handy number string into regular number", () => {
   expect(n("1_000_000")).toBe(1000000);
   expect(n("1_000") + n("1_000_000")).toBe(1001000);
+});
+
+test("Remove whitespaces and new lines from string", () => {
+  let cleanThisUp = `This  is a    example   string with      many     whitespaces
+
+
+  and
+  
+  this
+  
+  
+  is ,    a
+  multiline      .
+  
+  Is this a multiline ? No !
+  `;
+
+  expect(clean(cleanThisUp)).toBe(
+    "This is a example string with many whitespaces and this is, a multiline. Is this a multiline? No! "
+  );
+  expect(clean(cleanThisUp, true).length).toBe(114);
 });
