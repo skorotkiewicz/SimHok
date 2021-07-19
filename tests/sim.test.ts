@@ -9,7 +9,7 @@ import {
   split,
   rstrip,
   lstrip,
-  abs,
+  flip,
   zfill,
   log,
   compareIgnoreCase,
@@ -105,8 +105,8 @@ test("remove letters from left", () => {
 
 test("toggle number to negative and postive", () => {
   let num = 42;
-  expect(abs(num)).toBe(-42);
-  expect(abs(abs(num))).toBe(42);
+  expect(flip(num)).toBe(-42);
+  expect(flip(flip(num))).toBe(42);
 });
 
 test("adjust zeros", () => {

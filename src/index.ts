@@ -65,13 +65,13 @@ export const startsWith = (data: string, start: string): boolean => {
  * @returns {boolean} Returns true if found.
  */
 export const endsWith = (data: string, end: string): boolean => {
-  return split(data, [0, abs(len(end))]) === end;
+  return split(data, [0, flip(len(end))]) === end;
 };
 
 export const split = (data: string, range: any): string | number => {
   if (len(range) === 2) {
     if (range[1] < 0) {
-      return data.slice(data.length - abs(range[1]));
+      return data.slice(data.length - flip(range[1]));
     } else {
       return data.slice(range[0], range[1] !== 0 ? range[1] : Infinity);
     }
@@ -87,7 +87,7 @@ export const split = (data: string, range: any): string | number => {
  * @returns {string}
  */
 export const rstrip = (data: string, remove: string): string => {
-  return endsWith(data, remove) ? data.slice(0, abs(len(remove))) : data;
+  return endsWith(data, remove) ? data.slice(0, flip(len(remove))) : data;
 };
 
 /**
@@ -105,7 +105,7 @@ export const lstrip = (data: string, remove: string): string => {
  * @param {number} data 
  * @returns {number}
  */
-export const abs = (data: number): number => {
+export const flip = (data: number): number => {
   return data < 0 ? Math.abs(data) : -Math.abs(data);
 };
 

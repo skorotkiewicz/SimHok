@@ -63,8 +63,8 @@ zfill(james_bond, 2);  // string: 007
 count([1,2,1,3,1], 1); // number: 3
 compareIgnoreCase("Sebastian", "sebastian"); // boolean: true
 
-abs(42);              // number: -42
-abs(-42);             // number: 42
+flip(42);              // number: -42
+flip(-42);             // number: 42
 
 n("1_000_000")        // number: 1000000
 
