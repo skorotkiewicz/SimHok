@@ -184,3 +184,19 @@ export const clean = (data: string, multiline = false): string => {
     .replace(/\s+\;/g, ";")
     .replace(/\s+\!/g, "!");
 };
+
+/**
+ * Repeats the mentioned text or number by given number of times
+ * @param {string | number} data
+ * @param {string} many
+ * @returns {string | number}
+ */
+export const rept = (data: string | number, many: number): string | number => {
+  let dataType = typeof data;
+
+  let fill = "";
+  for (let i = 0; i < many; i++) {
+    fill += data;
+  }
+  return dataType === "number" ? Number(fill) : String(fill);
+};

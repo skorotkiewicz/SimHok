@@ -16,6 +16,7 @@ import {
   count,
   n,
   clean,
+  rept,
 } from "@src/index";
 
 const user = "sebastian";
@@ -158,4 +159,9 @@ test("Remove whitespaces and new lines from string", () => {
     "This is a example string with many whitespaces and this is, a multiline. Is this a multiline? No! "
   );
   expect(clean(cleanThisUp, true).length).toBe(114);
+});
+
+test("Repeat string and number", () => {
+  expect(rept(1, 10)).toBe(1111111111);
+  expect(rept("1", 10)).toBe("1111111111");
 });

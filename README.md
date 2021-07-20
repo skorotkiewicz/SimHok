@@ -68,11 +68,15 @@ flip(-42);             // number: 42
 
 n("1_000_000")         // number: 1000000
 
+rept(1, 10)            // number: 1111111111
+rept("1", 10)          // string: 1111111111
+
 clean("This is   inline   String !"); // string: "This is inline String!"
+
 // or with multi lines:
 clean(`Is   this    now , 
-multi line  String ?  `, true);       // string:
-
+multi line  String ?  `, true);       
+// string:
 `Is this now, 
 multi line String?`;
 
