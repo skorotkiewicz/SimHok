@@ -57,6 +57,9 @@ split(user, [0, 2]);   // string: se
 split(user, [3, 0]);   // string: astian
 split(user, [0, -3]);  // string: ian
 
+// start from 4 character and get 3 next characters
+mid("Roland Watson", 4, 3) // string: and
+
 let james_bond = 7;
 zfill(james_bond, 2);  // string: 007
 
@@ -70,9 +73,6 @@ n("1_000_000")         // number: 1000000
 
 rept(1, 10)            // number: 1111111111
 rept("1", 10)          // string: 1111111111
-
-// start from 4 character and get 3 next characters
-mid("Roland Watson", 4, 3) // string: and
 
 clean("This is   inline   String !"); // string: "This is inline String!"
 
