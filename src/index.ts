@@ -200,3 +200,14 @@ export const rept = (data: string | number, many: number): string | number => {
   }
   return dataType === "number" ? Number(fill) : String(fill);
 };
+
+/**
+ * Returns the characters from a text string based on the starting position and number of characters
+ * @param {string} data
+ * @param {number} start
+ * @param {number} many
+ * @returns {string}
+ */
+export const mid = (data: string, start: number, many: number): string => {
+  return data.slice(start - 1, Infinity).substring(0, many);
+};

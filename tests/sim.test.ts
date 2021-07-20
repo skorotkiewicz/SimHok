@@ -17,6 +17,7 @@ import {
   n,
   clean,
   rept,
+  mid,
 } from "@src/index";
 
 const user = "sebastian";
@@ -164,4 +165,8 @@ test("Remove whitespaces and new lines from string", () => {
 test("Repeat string and number", () => {
   expect(rept(1, 10)).toBe(1111111111);
   expect(rept("1", 10)).toBe("1111111111");
+});
+
+test("Return middle string", () => {
+  expect(mid("Roland Watson", 4, 3)).toBe("and");
 });
