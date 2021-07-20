@@ -187,8 +187,8 @@ export const clean = (data: string, multiline = false): string => {
 
 /**
  * Repeats the mentioned text or number by given number of times
- * @param {string | number} data
- * @param {string} many
+ * @param {string | number} data string or number to repeat mutilple times
+ * @param {string} many the number of times to repeat text
  * @returns {string | number}
  */
 export const rept = (data: string | number, many: number): string | number => {
@@ -203,9 +203,9 @@ export const rept = (data: string | number, many: number): string | number => {
 
 /**
  * Returns the characters from a text string based on the starting position and number of characters
- * @param {string} data
- * @param {number} start
- * @param {number} many
+ * @param {string} data text string that contains the characters to extract
+ * @param {number} start specifies the character at which to start the extract
+ * @param {number} many number of characters to extract from the start position
  * @returns {string}
  */
 export const mid = (data: string, start: number, many: number): string => {
