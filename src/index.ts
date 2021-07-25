@@ -211,3 +211,13 @@ export const rept = (data: string | number, many: number): string | number => {
 export const mid = (data: string, start: number, many: number): string => {
   return data.slice(start - 1, Infinity).substring(0, many);
 };
+
+/**
+ * Returns random number between two numbers
+ * @param {number} min
+ * @param {number} max
+ * @returns {number}
+ */
+export const rand = (min: number, max: number): number => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};

@@ -18,6 +18,7 @@ import {
   clean,
   rept,
   mid,
+  rand,
 } from "@src/index";
 
 const user = "sebastian";
@@ -169,4 +170,10 @@ test("Repeat string and number", () => {
 
 test("Return middle string", () => {
   expect(mid("Roland Watson", 4, 3)).toBe("and");
+});
+
+test("Returns random number", () => {
+  expect(typeof rand(10, 100)).toBe("number");
+  let r = rand(50, 100);
+  expect(r).toBe(r >= 50 || r <= 100 ? r : false);
 });

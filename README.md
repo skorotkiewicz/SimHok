@@ -70,6 +70,7 @@ flip(42);              // number: -42
 flip(-42);             // number: 42
 
 n("1_000_000")         // number: 1000000
+rand(1, 100)           // number: 42
 
 rept(1, 10)            // number: 1111111111
 rept("1", 10)          // string: 1111111111
